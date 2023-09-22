@@ -23,3 +23,9 @@
     padding: 2px;
     width: 100px;
 }
+.task-delete-icon{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+}

@@ -51,7 +51,22 @@ const Home = () => {
         setPriority(' ');
 
     }
-  
+
+    const removeTaskFromList = (id) => {
+        let index;
+
+        taskList.forEach((task, i) => {
+            if (task.id === id) {
+                index = i
+            }
+        })
+        // const index = taskList.indexOf(obj);
+
+        // const tempArray = taskList;
+        // tempArray.splice(index, 1);
+
+        // setTaskList([...tempArray])
+    }
 
     return (
         <div className="container">
@@ -63,7 +78,15 @@ const Home = () => {
                     {
                         taskList.map((taskItem, index) => {
                             const { id, title, description, priority } = taskItem;
-                            return <Task id={id} title={title} description={description} priority={priority} />
+
+                            return <Task id={id}
+                                title={title}
+                                description={description}
+                                priority={priority}
+                                key={index}
+                                removeTaskFromList={removeTaskFromList}
+
+                            />
                         })
                     }
                 </div>
