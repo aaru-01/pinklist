@@ -3,7 +3,7 @@ import "./Home.css"
 import Task from "./../../components/Task/Task";
 
 const Home = () => {
-    const [taskList, settaskList] = useState([
+    const [taskList, setTaskList] = useState([
         {
             id: 1,
             title: 'submit assignment',
@@ -35,17 +35,18 @@ const Home = () => {
     const [description, setDescription] = useState('')
     const [priority, setPriority] = useState('')
 
-const addTaskToList = () => {
-    const randomId = Math.floor(Math.random() * 1000);
-    
-    const obj = {
-        id: randomId,
-        title: title,
-        description: description,
-        priority:priority
+    const addTaskToList = () => {
+        const randomId = Math.floor(Math.random() * 1000);
+
+        const obj = {
+            id: randomId,
+            title: title,
+            description: description,
+            priority: priority
+        };
+        setTaskList([...taskList, obj]);
     }
-}
-settaskList([...taskList, obj])
+  
 
     return (
         <div className="container">
@@ -69,40 +70,40 @@ settaskList([...taskList, obj])
                         {/* <h3>Shoe me title{title}</h3> */}
                         <form>
                             {/* title: */}
-                            <input type="text" 
-                            value={title} 
-                            onChange={(e) => {
-                                setTitle(e.target.value)
-                            }} 
-                            placeholder="Enter Title"
-                            className="task-input"
+                            <input type="text"
+                                value={title}
+                                onChange={(e) => {
+                                    setTitle(e.target.value)
+                                }}
+                                placeholder="Enter Title"
+                                className="task-input"
                             />
 
                             {/* description: */}
-                            <input type="text" 
-                            value={ description} 
-                            onChange={(e) => {
-                                setDescription(e.target.value)
-                            }} 
-                            placeholder="Enter Description"
-                            className="task-input"
+                            <input type="text"
+                                value={description}
+                                onChange={(e) => {
+                                    setDescription(e.target.value)
+                                }}
+                                placeholder="Enter Description"
+                                className="task-input"
                             />
 
                             {/* priority: */}
-                            <input type="text" 
-                            value={priority} 
-                            onChange={(e) => {
-                                setPriority(e.target.value)
-                            }} 
-                            placeholder="Enter Priority"
-                            className="task-input"
+                            <input type="text"
+                                value={priority}
+                                onChange={(e) => {
+                                    setPriority(e.target.value)
+                                }}
+                                placeholder="Enter Priority"
+                                className="task-input"
                             />
-                            
-                          <button  className="btn-add-task" 
-                          type='button'
-                           onClick={addTaskToList}>
-                            Add Task to List
-                          </button>
+
+                            <button className="btn-add-task"
+                                type='button'
+                                onClick={addTaskToList}>
+                                Add Task to List
+                            </button>
                         </form>
 
                     </div>
