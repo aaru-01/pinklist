@@ -10,24 +10,24 @@ const Home = () => {
             description: 'Nahi to gali padegi',
             priority: 'high'
         },
-        {
-            id: 2,
-            title: 'Go to market',
-            description: 'Buy Alu and Gobi',
-            priority: 'Medium'
-        },
-        {
-            id: 3,
-            title: 'Build project',
-            description: 'Build project and post it on LinkedIn',
-            priority: 'very high'
-        },
-        {
-            id: 4,
-            title: 'Good Night',
-            description: 'Good night bolke so jana hai',
-            priority: 'very high'
-        }
+        // {
+        //     id: 2,
+        //     title: 'Go to market',
+        //     description: 'Buy Alu and Gobi',
+        //     priority: 'Medium'
+        // },
+        // {
+        //     id: 3,
+        //     title: 'Build project',
+        //     description: 'Build project and post it on LinkedIn',
+        //     priority: 'very high'
+        // },
+        // {
+        //     id: 4,
+        //     title: 'Good Night',
+        //     description: 'Good night bolke so jana hai',
+        //     priority: 'very high'
+        // }
 
     ])
 
@@ -45,6 +45,11 @@ const Home = () => {
             priority: priority
         };
         setTaskList([...taskList, obj]);
+
+        setTitle(' ');
+        setDescription(' ');
+        setPriority(' ');
+
     }
   
 
