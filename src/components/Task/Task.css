@@ -26,6 +26,12 @@
 .task-delete-icon{
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    right: 50px;
+    cursor: pointer;
+}
+.task-edit-icon{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
     cursor: pointer;
 }
