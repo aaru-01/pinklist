@@ -40,3 +40,13 @@
     display: flex;
     justify-content: space-around;
 }
+.tasks-container{
+    /* background-color: tomato; */
+    height: 400px;
+    overflow-y: scroll;
+}
+
+/* reduce scrollbar width */
+.tasks-container::-webkit-scrollbar{
+    width: 5px;
+}
